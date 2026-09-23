@@ -12,4 +12,7 @@ Cada proyecto vive en su propia carpeta dentro de este repositorio, con su propi
 
 ## Licencia
 
-Sin licencia definida por ahora.
+Este repositorio usa un esquema de licencia dual:
+
+- **Código** (scripts, notebooks ejecutables, proyectos): [MIT License](./LICENSE)
+- **Contenido** (notas, documentación, tutoriales, material didáctico): [CC BY 4.0](./LICENSE-CONTENT.md)
