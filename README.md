@@ -10,6 +10,10 @@ Este repositorio reúne distintos proyectos, experimentos y utilidades relaciona
 
 Cada proyecto vive en su propia carpeta dentro de este repositorio, con su propio README describiendo su propósito, instalación y uso.
 
+## Proyectos
+
+- **FinanzasFamiliares** (`./FinanzasFamiliares`): aplicación de finanzas familiares compartidas con registro de movimientos, metas de ahorro, reportes y sincronización con Firebase.
+
 ## Licencia
 
 Este repositorio usa un esquema de licencia dual:
