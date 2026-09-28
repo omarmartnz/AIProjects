@@ -14,5 +14,5 @@ Cada proyecto vive en su propia carpeta dentro de este repositorio, con su propi
 
 Este repositorio usa un esquema de licencia dual:
 
-- **Código** (scripts, notebooks ejecutables, proyectos): [MIT License](./LICENSE)
-- **Contenido** (notas, documentación, tutoriales, material didáctico): [CC BY 4.0](./LICENSE-CONTENT.md)
+- **Código** (scripts, notebooks ejecutables, proyectos): [PolyForm Noncommercial 1.0.0](./LICENSE)
+- **Contenido** (notas, documentación, tutoriales, material didáctico): [CC BY-NC-SA 4.0](./LICENSE-CONTENT.md)
