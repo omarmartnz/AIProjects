@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Fondo Abisal: Mezcla de Pizarra e Índigo profundo (coincide con el modo oscuro de la app) -->
+    <linearGradient id="harmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+
+    <!-- Pilar Izquierdo (Soporte Familia & Banca): Índigo a Azul Zafiro (Color principal del Header) -->
+    <linearGradient id="harmLeftGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="50%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+
+    <!-- Pilar Derecho (Soporte Prosperidad & Salud Financiera): Esmeralda a Menta (Color de Ingresos/Ahorro) -->
+    <linearGradient id="harmRightGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+
+    <!-- Núcleo Central: Oro Cálido (Coincide con Metas de Ahorro / Alcancía en la app) -->
+    <radialGradient id="harmCoreGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="35%" stop-color="#FBBF24"/>
+      <stop offset="70%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </radialGradient>
+
+    <!-- Resplandor suave -->
+    <filter id="harmGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Contenedor Squircle Premium -->
+  <rect width="512" height="512" rx="112" fill="url(#harmBg)"/>
+  
+  <!-- Bisel sutil de luz perimetral -->
+  <rect width="508" height="508" x="2" y="2" rx="110" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="3"/>
+
+  <!-- Composición Central -->
+  <g transform="translate(0, 0)">
+    <!-- Luz ambiental de fondo en el centro del hogar -->
+    <circle cx="256" cy="248" r="110" fill="#4F46E5" opacity="0.14" filter="url(#harmGlow)"/>
+
+    <!-- Pilar Izquierdo (Hogar / Familia / Cuentas) -->
+    <path d="M 132 366
+             C 132 290, 160 215, 238 128
+             C 246 119, 252 113, 256 108
+             C 256 122, 248 140, 234 162
+             C 188 234, 180 286, 180 348
+             C 180 366, 164 376, 148 376
+             C 138 376, 132 372, 132 366 Z" 
+          fill="url(#harmLeftGrad)"/>
+
+    <!-- Pilar Derecho (Ingresos / Ahorro / Estabilidad) -->
+    <path d="M 380 366
+             C 380 290, 352 215, 274 128
+             C 266 119, 260 113, 256 108
+             C 256 122, 264 140, 278 162
+             C 324 234, 332 286, 332 348
+             C 332 366, 348 376, 364 376
+             C 374 376, 380 372, 380 366 Z" 
+          fill="url(#harmRightGrad)"/>
+
+    <!-- Vértice de Unión (El Techo Protector Compartido) -->
+    <path d="M 256 94 
+             L 278 122 
+             C 264 128, 248 128, 234 122 Z" 
+          fill="#FFFFFF" opacity="0.95"/>
+
+    <!-- Halo del núcleo dorado -->
+    <circle cx="256" cy="268" r="30" fill="#F59E0B" opacity="0.28" filter="url(#harmGlow)"/>
+    
+    <!-- Estrella de 4 Puntas: Futuro, Ahorro y Metas Familiares -->
+    <path d="M 256 216
+             Q 256 268 204 268
+             Q 256 268 256 320
+             Q 256 268 308 268
+             Q 256 268 256 216 Z" 
+          fill="url(#harmCoreGrad)"/>
+
+    <!-- Destello central -->
+    <circle cx="256" cy="268" r="8" fill="#FFFFFF" opacity="0.95"/>
+    
+    <!-- Base sutil de equilibrio -->
+    <ellipse cx="256" cy="386" rx="42" ry="7" fill="#10B981" opacity="0.22"/>
+  </g>
+</svg>

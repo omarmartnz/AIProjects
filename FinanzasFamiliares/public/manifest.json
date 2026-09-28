@@ -1,0 +1,32 @@
+{
+  "id": "/",
+  "name": "Finanzas Familiares",
+  "short_name": "Finanzas",
+  "description": "Gestión y control de finanzas familiares: presupuestos mensuales, categorización, cuentas bancarias y sincronización colaborativa.",
+  "theme_color": "#090D16",
+  "background_color": "#090D16",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

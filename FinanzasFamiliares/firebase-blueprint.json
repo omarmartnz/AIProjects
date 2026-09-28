@@ -1,0 +1,76 @@
+{
+  "entities": {
+    "user": {
+      "title": "User",
+      "description": "User profile with list of associated family IDs and active family ID",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "currentFamilyId": { "type": "string" },
+        "familyIds": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["uid"]
+    },
+    "family": {
+      "title": "Family",
+      "description": "Family workspace containing shared finances, budgets, transactions, members and settings",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "familyName": { "type": "string" },
+        "inviteCode": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "memberUids": { "type": "array", "items": { "type": "string" } },
+        "state": { "type": "object" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "familyName", "inviteCode", "ownerId", "memberUids"]
+    },
+    "invite": {
+      "title": "Invite",
+      "description": "Direct family invite mapping by code to prevent collection scraping",
+      "type": "object",
+      "properties": {
+        "familyId": { "type": "string" },
+        "familyName": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["familyId", "familyName", "ownerId"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "user",
+      "description": "Individual user document storing their active family selection and joined families",
+      "rules": {
+        "read": "request.auth != null && request.auth.uid == userId",
+        "write": "request.auth != null && request.auth.uid == userId"
+      }
+    },
+    "/invites/{inviteCode}": {
+      "schema": "invite",
+      "description": "Invite code directory mapping unique codes to family IDs for secure join without bulk enumeration",
+      "rules": {
+        "read": "request.auth != null",
+        "write": "request.auth != null"
+      }
+    },
+    "/families/{familyId}": {
+      "schema": "family",
+      "description": "Shared family workspace document accessible strictly to its members and owner",
+      "rules": {
+        "read": "request.auth != null",
+        "create": "request.auth != null && request.resource.data.ownerId == request.auth.uid",
+        "update": "request.auth != null && (request.auth.uid in resource.data.memberUids || request.auth.uid == resource.data.ownerId || request.auth.uid in request.resource.data.memberUids)",
+        "delete": "request.auth != null && request.auth.uid == resource.data.ownerId"
+      }
+    }
+  }
+}

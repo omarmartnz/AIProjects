@@ -1,0 +1,6 @@
+{
+  "name": "Finanzas Familiares",
+  "description": "App para la gestión y control de finanzas familiares: presupuestos mensuales, categorización, etiquetas, alertas de límites, miembros de la familia, integración bancaria y sincronización en la nube con reportes PDF.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

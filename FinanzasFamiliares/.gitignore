@@ -1,0 +1,14 @@
+node_modules/
+build/
+dist/
+dev-dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+family_finances_data.json
+*.local.json
+*.sqlite
+*.db
+.vs/
