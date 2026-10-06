@@ -1,0 +1,6 @@
+{
+  "name": "Trivia Quiz Multijugador",
+  "description": "Juego de quiz con multijugador en tiempo real, creación comunitaria de cuestionarios, retos diarios, chat en vivo y tablas de clasificación mensuales.",
+  "requestFramePermissions": ["notifications"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -13,6 +13,7 @@ Cada proyecto vive en su propia carpeta dentro de este repositorio, con su propi
 ## Proyectos
 
 - **FinanzasFamiliares** (`./FinanzasFamiliares`): aplicación de finanzas familiares compartidas con registro de movimientos, metas de ahorro, reportes y sincronización con Firebase.
+- **QuizVerse** (`./QuizVerse`): prototipo de trivia multijugador en tiempo real creado en Google AI Studio (estado: inconcluso; sin revisión formal de seguridad y funcionabilidad).
 
 ## Licencia
 
